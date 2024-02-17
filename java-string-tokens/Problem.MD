@@ -38,10 +38,19 @@ We consider a token to be a contiguous segment of alphabetic characters. There a
 
 Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
-        String[] tokens = s.split("[\\s?,!']+");    
-        System.out.println(tokens.length);
-        for (String token : tokens) {
-            System.out.println(token);
+        //This trim() method is removing space characters from beginning and ending of string
+        s = s.trim();
+        //This regex pattern include every value except uppercase letters, lowercase letters, and numbers
+        String[] myList = s.split("[^A-Za-z0-9]+");
+
+        if (s.length() == 0) {
+        System.out.println(0);
         }
-        scan.close();
+        else {
+        System.out.println(myList.length);
+        for (String x: myList) {
+        System.out.println(x);
+        }
+
+        }
 ```
