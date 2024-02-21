@@ -5,3 +5,11 @@ The first character of the username must be an alphabetic character, i.e., eithe
 ```java
 public static final String regularExpression = "^[a-zA-Z][a-zA-Z0-9_]{7,29}$";
 ```
+
+```
+^ : Indicates the start of the pattern.
+[a-zA-Z] : Ensures that the first character is a letter (either uppercase or lowercase).
+[a-zA-Z0-9_] : Includes alphanumeric characters and underscore.
+{7,29} : Specifies that the length should be at least 8 and at most 30 characters.
+$ : Indicates the end of the pattern.
+```
